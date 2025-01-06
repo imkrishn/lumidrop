@@ -2,5 +2,9 @@
   "name": "glowfall",
   "version": "1.0.0",
   "private": true,
-  "description": "arcade catcher built with pixi.js, typescript and pixi-spine"
+  "description": "arcade catcher built with pixi.js, typescript and pixi-spine",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  }
 }
