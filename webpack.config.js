@@ -7,5 +7,9 @@ module.exports = (env, argv) => {
 
   return {
     entry: './src/main.ts',
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: prod ? '[name].[contenthash:8].js' : '[name].js',
+    }
   }
 }
