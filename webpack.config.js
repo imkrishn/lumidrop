@@ -22,5 +22,6 @@ module.exports = (env, argv) => {
       new CopyPlugin({ patterns: [{ from: 'public', to: '.' }] })
     ],
     devServer: { static: path.resolve(__dirname, 'public'), port: 5173, hot: true },
-  }
-}
+    performance: { hints: false }
+  };
+};
