@@ -10,6 +10,8 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: prod ? '[name].[contenthash:8].js' : '[name].js',
-    }
+      clean: true
+    },
+    devtool: prod ? false : 'eval-source-map',
   }
 }
