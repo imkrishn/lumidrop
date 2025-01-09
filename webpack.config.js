@@ -17,5 +17,10 @@ module.exports = (env, argv) => {
     module: {
       rules: [{ test: /\.ts$/, use: 'ts-loader', exclude: /node_modules/ }]
     },
+    plugins: [
+      new HtmlWebpackPlugin({ template: 'src/index.html' }),
+      new CopyPlugin({ patterns: [{ from: 'public', to: '.' }] })
+    ],
+    devServer: { static: path.resolve(__dirname, 'public'), port: 5173, hot: true },
   }
 }
