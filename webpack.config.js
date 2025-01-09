@@ -13,5 +13,9 @@ module.exports = (env, argv) => {
       clean: true
     },
     devtool: prod ? false : 'eval-source-map',
+    resolve: { extensions: ['.ts', '.js'] },
+    module: {
+      rules: [{ test: /\.ts$/, use: 'ts-loader', exclude: /node_modules/ }]
+    },
   }
 }
