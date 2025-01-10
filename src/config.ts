@@ -5,4 +5,7 @@ export const config = {
   floorY: 548,
   lives: 3,
   spineAsset: 'assets/spine/hero.json',
+  anim: { idle: 'idle', move: 'run' },
+  hero: {
+  }
 }
