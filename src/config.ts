@@ -7,5 +7,8 @@ export const config = {
   spineAsset: 'assets/spine/hero.json',
   anim: { idle: 'idle', move: 'run' },
   hero: {
+    y: 520,
+    speed: 540,
+    padHeight: 84,
   }
 }
