@@ -19,5 +19,7 @@ export const config = {
   },
   spawn: {
     start: 0.9,
+    min: 0.3,
+    ramp: 0.015
   }
-}
+};
