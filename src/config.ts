@@ -17,4 +17,7 @@ export const config = {
     minSpeed: 190,
     maxSpeed: 300
   },
+  spawn: {
+    start: 0.9,
+  }
 }
