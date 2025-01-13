@@ -10,5 +10,8 @@ export const config = {
     y: 520,
     speed: 540,
     padHeight: 84,
+    spineScale: 0.2
+  },
+  orb: {
   }
 }
