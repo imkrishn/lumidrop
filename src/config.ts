@@ -13,5 +13,8 @@ export const config = {
     spineScale: 0.2
   },
   orb: {
-  }
+    radius: 16,
+    minSpeed: 190,
+    maxSpeed: 300
+  },
 }
