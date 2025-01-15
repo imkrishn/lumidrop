@@ -9,6 +9,10 @@ export class EventBus<E extends object> {
     this.listeners[name] = set;
     return () => {
       set.delete(fn);
-    }
+    };
+  }
+
+  emit<K extends keyof E>(name: K, payload: E[K]): void {
+    this.listeners[name]?.forEach((fn) => fn(payload));
   }
 }
