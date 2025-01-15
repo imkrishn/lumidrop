@@ -7,5 +7,8 @@ export class EventBus<E extends object> {
     const set = this.listeners[name] ?? new Set<Handler<E[K]>>();
     set.add(fn);
     this.listeners[name] = set;
+    return () => {
+      set.delete(fn);
+    }
   }
 }
