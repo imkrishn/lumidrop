@@ -15,5 +15,10 @@ export class ObjectPool<T> {
 
   release(item: T): void {
     this.reset(item);
+    this.free.push(item);
+  }
+
+  get idle(): number {
+    return this.free.length;
   }
 }
