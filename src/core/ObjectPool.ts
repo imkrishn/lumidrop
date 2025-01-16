@@ -8,4 +8,8 @@ export class ObjectPool<T> {
   ) {
     for (let i = 0; i < prewarm; i++) this.free.push(create());
   }
+
+  acquire(): T {
+    return this.free.pop() ?? this.create();
+  }
 }
