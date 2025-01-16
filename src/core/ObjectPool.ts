@@ -12,4 +12,8 @@ export class ObjectPool<T> {
   acquire(): T {
     return this.free.pop() ?? this.create();
   }
+
+  release(item: T): void {
+    this.reset(item);
+  }
 }
