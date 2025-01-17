@@ -16,5 +16,8 @@ export class StateMachine<K extends string> {
   }
 
   change(key: K): void {
+    const next = this.states.get(key);
+    if (!next) throw new Error(`unknown state: ${key}`);
+    this.active?.exit();
   }
 }
