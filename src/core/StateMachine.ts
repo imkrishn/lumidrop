@@ -12,5 +12,9 @@ export class StateMachine<K extends string> {
 
   register(key: K, state: State): this {
     this.states.set(key, state);
+    return this;
+  }
+
+  change(key: K): void {
   }
 }
