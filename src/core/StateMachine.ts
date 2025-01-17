@@ -9,4 +9,8 @@ export class StateMachine<K extends string> {
   private states = new Map<K, State>();
   private active: State | null = null;
   key: K | null = null;
+
+  register(key: K, state: State): this {
+    this.states.set(key, state);
+  }
 }
