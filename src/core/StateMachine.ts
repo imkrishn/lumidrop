@@ -25,5 +25,10 @@ export class StateMachine<K extends string> {
   }
 
   update(dt: number): void {
+    this.active?.update(dt);
+  }
+
+  confirm(): void {
+    this.active?.confirm?.();
   }
 }
