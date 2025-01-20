@@ -21,5 +21,9 @@ export class StateMachine<K extends string> {
     this.active?.exit();
     this.active = next;
     this.key = key;
+    next.enter();
+  }
+
+  update(dt: number): void {
   }
 }
