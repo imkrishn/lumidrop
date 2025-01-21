@@ -15,4 +15,6 @@ export class Orb extends Container {
   readonly radius = config.orb.radius;
   private body = new Graphics();
   private drawn: OrbKind | null = null;
+  private phase = 0;
+  private age = 0;
 }
