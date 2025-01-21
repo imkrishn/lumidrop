@@ -20,5 +20,10 @@ export class Orb extends Container {
 
   constructor() {
     super();
+    this.addChild(this.body);
+  }
+
+  configure(kind: OrbKind, x: number, speed: number): void {
+    this.kind = kind;
   }
 }
