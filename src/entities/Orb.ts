@@ -17,4 +17,8 @@ export class Orb extends Container {
   private drawn: OrbKind | null = null;
   private phase = 0;
   private age = 0;
+
+  constructor() {
+    super();
+  }
 }
