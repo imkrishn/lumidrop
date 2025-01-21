@@ -9,4 +9,6 @@ export const orbKinds: Record<OrbKind, { color: number; points: number }> = {
 };
 
 export class Orb extends Container {
+  kind: OrbKind = 'cyan';
+  speed = 0;
 }
