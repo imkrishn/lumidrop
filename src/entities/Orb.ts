@@ -25,5 +25,7 @@ export class Orb extends Container {
 
   configure(kind: OrbKind, x: number, speed: number): void {
     this.kind = kind;
+    this.speed = speed;
+    this.x = x;
   }
 }
