@@ -31,5 +31,7 @@ export class Orb extends Container {
     this.y = -30;
     this.age = 0;
     this.phase = rand(0, Math.PI * 2);
+    this.visible = true;
+    if (this.drawn !== kind) this.redraw();
   }
 }
