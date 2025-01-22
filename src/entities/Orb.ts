@@ -1,5 +1,6 @@
 import { Container, Graphics } from 'pixi.js';
 import { config } from '../config';
+import { rand } from '../utils/math';
 
 export type OrbKind = 'gold' | 'cyan' | 'bomb';
 
@@ -27,5 +28,8 @@ export class Orb extends Container {
     this.kind = kind;
     this.speed = speed;
     this.x = x;
+    this.y = -30;
+    this.age = 0;
+    this.phase = rand(0, Math.PI * 2);
   }
 }
