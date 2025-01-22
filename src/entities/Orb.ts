@@ -41,4 +41,8 @@ export class Orb extends Container {
     const pulse = 1 + Math.sin(this.age * 9 + this.phase) * 0.07;
     this.body.scale.set(pulse);
   }
+
+  private redraw(): void {
+    const { color } = orbKinds[this.kind];
+  }
 }
