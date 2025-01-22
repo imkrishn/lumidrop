@@ -34,4 +34,9 @@ export class Orb extends Container {
     this.visible = true;
     if (this.drawn !== kind) this.redraw();
   }
+
+  update(dt: number): void {
+    this.age += dt;
+    this.y += this.speed * dt;
+  }
 }
