@@ -38,5 +38,7 @@ export class Orb extends Container {
   update(dt: number): void {
     this.age += dt;
     this.y += this.speed * dt;
+    const pulse = 1 + Math.sin(this.age * 9 + this.phase) * 0.07;
+    this.body.scale.set(pulse);
   }
 }
