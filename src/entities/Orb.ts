@@ -44,5 +44,8 @@ export class Orb extends Container {
 
   private redraw(): void {
     const { color } = orbKinds[this.kind];
+    const r = this.radius;
+    const g = this.body;
+    g.clear();
   }
 }
