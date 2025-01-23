@@ -56,6 +56,9 @@ export class Orb extends Container {
       g.lineStyle(0).beginFill(color).drawRect(-2, -r - 7, 4, 8).endFill();
       g.beginFill(0xffd166).drawCircle(0, -r - 9, 3).endFill();
     } else {
+      g.beginFill(color).drawCircle(0, 0, r).endFill();
+      g.beginFill(0xffffff, 0.55).drawCircle(-r * 0.3, -r * 0.3, r * 0.35).endFill();
     }
+    this.drawn = this.kind;
   }
 }
