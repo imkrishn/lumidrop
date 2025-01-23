@@ -47,5 +47,8 @@ export class Orb extends Container {
     const r = this.radius;
     const g = this.body;
     g.clear();
+
+    g.beginFill(color, 0.1).drawCircle(0, 0, r * 2.3).endFill();
+    g.beginFill(color, 0.22).drawCircle(0, 0, r * 1.6).endFill();
   }
 }
