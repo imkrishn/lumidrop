@@ -50,5 +50,10 @@ export class Orb extends Container {
 
     g.beginFill(color, 0.1).drawCircle(0, 0, r * 2.3).endFill();
     g.beginFill(color, 0.22).drawCircle(0, 0, r * 1.6).endFill();
+
+    if (this.kind === 'bomb') {
+      g.beginFill(0x1a0f1f).lineStyle(3, color).drawCircle(0, 0, r).endFill();
+      g.lineStyle(0).beginFill(color).drawRect(-2, -r - 7, 4, 8).endFill();
+    }
   }
 }
