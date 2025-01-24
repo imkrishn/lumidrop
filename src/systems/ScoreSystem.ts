@@ -16,5 +16,9 @@ export class ScoreSystem {
   }
 
   get multiplier(): number {
+    return Math.min(1 + Math.floor(this.streak / 5), 4);
+  }
+
+  get dead(): boolean {
   }
 }
