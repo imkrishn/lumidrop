@@ -27,5 +27,8 @@ export class ScoreSystem {
     this.score = 0;
     this.lives = config.lives;
     this.streak = 0;
+    this.newBest = false;
+    this.bus.emit('scoreChanged', this.score);
+    this.bus.emit('livesChanged', this.lives);
   }
 }
