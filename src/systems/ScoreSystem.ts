@@ -30,5 +30,9 @@ export class ScoreSystem {
     this.newBest = false;
     this.bus.emit('scoreChanged', this.score);
     this.bus.emit('livesChanged', this.lives);
+    this.bus.emit('comboChanged', this.multiplier);
+  }
+
+  collect(points: number): void {
   }
 }
