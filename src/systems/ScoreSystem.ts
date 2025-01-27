@@ -20,5 +20,10 @@ export class ScoreSystem {
   }
 
   get dead(): boolean {
+    return this.lives <= 0;
+  }
+
+  reset(): void {
+    this.score = 0;
   }
 }
