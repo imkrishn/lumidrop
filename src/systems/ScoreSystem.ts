@@ -34,5 +34,8 @@ export class ScoreSystem {
   }
 
   collect(points: number): void {
+    this.streak += 1;
+    this.score += points * this.multiplier;
+    this.bus.emit('scoreChanged', this.score);
   }
 }
