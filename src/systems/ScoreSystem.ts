@@ -25,5 +25,7 @@ export class ScoreSystem {
 
   reset(): void {
     this.score = 0;
+    this.lives = config.lives;
+    this.streak = 0;
   }
 }
