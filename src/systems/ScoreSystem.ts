@@ -51,6 +51,8 @@ export class ScoreSystem {
     this.newBest = this.score > this.best;
     if (this.newBest) {
       this.best = this.score;
+      this.saveBest();
     }
+    this.bus.emit('runEnded', { score: this.score, best: this.best, newBest: this.newBest });
   }
 }
