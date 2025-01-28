@@ -55,4 +55,12 @@ export class ScoreSystem {
     }
     this.bus.emit('runEnded', { score: this.score, best: this.best, newBest: this.newBest });
   }
+
+  private loadBest(): number {
+    try {
+      return Number(localStorage.getItem(BEST_KEY)) || 0;
+    } catch {
+      return 0;
+    }
+  }
 }
