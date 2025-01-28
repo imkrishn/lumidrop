@@ -44,5 +44,9 @@ export class ScoreSystem {
     this.lives = Math.max(0, this.lives - 1);
     this.streak = 0;
     this.bus.emit('livesChanged', this.lives);
+    this.bus.emit('comboChanged', this.multiplier);
+  }
+
+  finish(): void {
   }
 }
