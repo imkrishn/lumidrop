@@ -63,4 +63,12 @@ export class ScoreSystem {
       return 0;
     }
   }
+
+  private saveBest(): void {
+    try {
+      localStorage.setItem(BEST_KEY, String(this.best));
+    } catch {
+      // storage can be blocked, not a big deal
+    }
+  }
 }
