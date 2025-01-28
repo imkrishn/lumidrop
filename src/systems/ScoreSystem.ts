@@ -48,5 +48,9 @@ export class ScoreSystem {
   }
 
   finish(): void {
+    this.newBest = this.score > this.best;
+    if (this.newBest) {
+      this.best = this.score;
+    }
   }
 }
