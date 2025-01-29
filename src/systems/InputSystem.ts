@@ -3,4 +3,7 @@ const RIGHT = ['ArrowRight', 'KeyD'];
 const CONFIRM = ['Enter', 'Space'];
 
 export class InputSystem {
+  onConfirm: (() => void) | null = null;
+  private held = new Set<string>();
+  private pointerX: number | null = null;
 }
