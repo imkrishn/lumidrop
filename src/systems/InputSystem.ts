@@ -9,5 +9,7 @@ export class InputSystem {
 
   constructor(private view: HTMLCanvasElement) {
     window.addEventListener('keydown', this.handleDown);
+    window.addEventListener('keyup', (e) => this.held.delete(e.code));
+    window.addEventListener('blur', () => this.held.clear());
   }
 }
