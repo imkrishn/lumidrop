@@ -26,5 +26,8 @@ export class InputSystem {
 
   direction(heroX: number): number {
     const keys = this.pressed(RIGHT) - this.pressed(LEFT);
+    if (keys !== 0) return keys;
+    if (this.pointerX === null) return 0;
+    const diff = this.pointerX - heroX;
   }
 }
