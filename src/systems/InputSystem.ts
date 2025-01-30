@@ -17,6 +17,8 @@ export class InputSystem {
       if (this.pointerX !== null) this.track(e);
     });
     const release = () => {
-    }
+      this.pointerX = null;
+    };
+    view.addEventListener('pointerup', release);
   }
 }
