@@ -15,7 +15,8 @@ export class InputSystem {
     view.addEventListener('pointerdown', (e) => this.track(e));
     view.addEventListener('pointermove', (e) => {
       if (this.pointerX !== null) this.track(e);
+    });
+    const release = () => {
     }
-    )
   }
 }
