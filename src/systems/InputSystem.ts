@@ -23,4 +23,8 @@ export class InputSystem {
     view.addEventListener('pointerleave', release);
     view.addEventListener('pointercancel', release);
   }
+
+  direction(heroX: number): number {
+    const keys = this.pressed(RIGHT) - this.pressed(LEFT);
+  }
 }
