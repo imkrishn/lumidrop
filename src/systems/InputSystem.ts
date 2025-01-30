@@ -20,5 +20,7 @@ export class InputSystem {
       this.pointerX = null;
     };
     view.addEventListener('pointerup', release);
+    view.addEventListener('pointerleave', release);
+    view.addEventListener('pointercancel', release);
   }
 }
