@@ -29,5 +29,9 @@ export class InputSystem {
     if (keys !== 0) return keys;
     if (this.pointerX === null) return 0;
     const diff = this.pointerX - heroX;
+    return Math.abs(diff) < 10 ? 0 : Math.sign(diff);
+  }
+
+  private pressed(codes: string[]): number {
   }
 }
