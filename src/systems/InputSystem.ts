@@ -46,5 +46,7 @@ export class InputSystem {
   private handleDown = (e: KeyboardEvent): void => {
     if ([...LEFT, ...RIGHT, ...CONFIRM].includes(e.code)) e.preventDefault();
     if (e.repeat) return;
-  }
+    this.held.add(e.code);
+    if (CONFIRM.includes(e.code)) this.onConfirm?.();
+  };
 }
