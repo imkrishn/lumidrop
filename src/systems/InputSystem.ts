@@ -1,3 +1,5 @@
+import { config } from '../config';
+
 const LEFT = ['ArrowLeft', 'KeyA'];
 const RIGHT = ['ArrowRight', 'KeyD'];
 const CONFIRM = ['Enter', 'Space'];
@@ -37,5 +39,10 @@ export class InputSystem {
   }
 
   private track(e: PointerEvent): void {
+    const rect = this.view.getBoundingClientRect();
+    this.pointerX = ((e.clientX - rect.left) / rect.width) * config.width;
+  }
+
+  private handleDown = (e: KeyboardEvent): void => {
   }
 }
