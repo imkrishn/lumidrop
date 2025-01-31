@@ -33,5 +33,9 @@ export class InputSystem {
   }
 
   private pressed(codes: string[]): number {
+    return codes.some((c) => this.held.has(c)) ? 1 : 0;
+  }
+
+  private track(e: PointerEvent): void {
   }
 }
