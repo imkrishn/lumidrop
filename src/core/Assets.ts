@@ -6,5 +6,7 @@ export async function loadSkeleton(url: string): Promise<ISkeletonData | null> {
     const res = await Assets.load(url);
     return (res?.spineData as ISkeletonData) ?? null;
   } catch {
+    console.warn(`no spine files at ${url}, using the built in hero`);
+    return null;
   }
 }
