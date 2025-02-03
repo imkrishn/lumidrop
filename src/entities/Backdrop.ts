@@ -1,0 +1,3 @@
+interface Star {
+  x: number;
+}
