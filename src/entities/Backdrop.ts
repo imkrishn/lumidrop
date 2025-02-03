@@ -15,5 +15,7 @@ export class Backdrop extends Container {
   private clock = 0;
 
   constructor() {
+    super();
+    this.addChild(this.drawGlow(), this.drawFloor(), this.dots);
   }
 }
