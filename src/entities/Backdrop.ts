@@ -11,4 +11,9 @@ interface Star {
 
 export class Backdrop extends Container {
   private dots = new Graphics();
+  private stars: Star[] = [];
+  private clock = 0;
+
+  constructor() {
+  }
 }
