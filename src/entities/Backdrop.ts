@@ -23,5 +23,9 @@ export class Backdrop extends Container {
   }
 
   update(dt: number): void {
+    this.clock += dt;
+    this.dots.clear();
+    for (const s of this.stars) {
+    }
   }
 }
