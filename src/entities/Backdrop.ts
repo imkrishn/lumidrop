@@ -28,6 +28,11 @@ export class Backdrop extends Container {
     for (const s of this.stars) {
       s.y += s.speed * dt;
       if (s.y > config.height) Object.assign(s, this.makeStar(-2));
+      const twinkle = 0.6 + Math.sin(this.clock * 2 + s.phase) * 0.4;
+      this.dots.beginFill(0xffffff, s.alpha * twinkle).drawCircle(s.x, s.y, s.r).endFill();
     }
+  }
+
+  private makeStar(y: number): Star {
   }
 }
