@@ -1,4 +1,6 @@
 import { Container, Graphics } from 'pixi.js';
+import { config } from '../config';
+import { rand } from '../utils/math';
 
 interface Star {
   x: number;
@@ -17,5 +19,9 @@ export class Backdrop extends Container {
   constructor() {
     super();
     this.addChild(this.drawGlow(), this.drawFloor(), this.dots);
+    for (let i = 0; i < 130; i++) this.stars.push(this.makeStar(rand(0, config.height)));
+  }
+
+  update(dt: number): void {
   }
 }
