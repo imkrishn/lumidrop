@@ -26,6 +26,8 @@ export class Backdrop extends Container {
     this.clock += dt;
     this.dots.clear();
     for (const s of this.stars) {
+      s.y += s.speed * dt;
+      if (s.y > config.height) Object.assign(s, this.makeStar(-2));
     }
   }
 }
