@@ -36,6 +36,9 @@ export class Backdrop extends Container {
   private makeStar(y: number): Star {
     const depth = Math.random();
     return {
+      x: rand(0, config.width),
+      y,
+      r: 0.6 + depth * 1.4,
     }
   }
 }
