@@ -46,5 +46,9 @@ export class Backdrop extends Container {
   }
 
   private drawGlow(): Graphics {
+    const g = new Graphics();
+    for (let i = 0; i < 8; i++) {
+      g.beginFill(0x3b1d6e, 0.05).drawCircle(200, 140, 90 + i * 38).endFill();
+    }
   }
 }
