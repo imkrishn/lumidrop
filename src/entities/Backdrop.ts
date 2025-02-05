@@ -41,6 +41,10 @@ export class Backdrop extends Container {
       r: 0.6 + depth * 1.4,
       speed: 8 + depth * 40,
       alpha: 0.3 + depth * 0.6,
-    }
+      phase: rand(0, Math.PI * 2)
+    };
+  }
+
+  private drawGlow(): Graphics {
   }
 }
