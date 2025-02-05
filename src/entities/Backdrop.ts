@@ -53,4 +53,9 @@ export class Backdrop extends Container {
     }
     return g;
   }
+
+  private drawFloor(): Graphics {
+    const g = new Graphics();
+    const top = config.floorY;
+  }
 }
