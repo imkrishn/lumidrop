@@ -57,5 +57,8 @@ export class Backdrop extends Container {
   private drawFloor(): Graphics {
     const g = new Graphics();
     const top = config.floorY;
+    for (let i = 0; i < 10; i++) {
+      g.beginFill(0x7df9ff, 0.018).drawRect(0, top - i * 5, config.width, i * 5).endFill();
+    }
   }
 }
