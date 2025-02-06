@@ -19,5 +19,9 @@ export class Spawner {
 
   reset(): void {
     this.clear();
+    this.timer = 0.6;
+  }
+
+  update(dt: number, elapsed: number): void {
   }
 }
