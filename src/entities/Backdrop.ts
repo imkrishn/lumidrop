@@ -60,5 +60,8 @@ export class Backdrop extends Container {
     for (let i = 0; i < 10; i++) {
       g.beginFill(0x7df9ff, 0.018).drawRect(0, top - i * 5, config.width, i * 5).endFill();
     }
+    g.beginFill(0x0f1330).drawRect(0, top, config.width, config.height - top).endFill();
+    g.lineStyle(2, 0x7df9ff, 0.45).moveTo(0, top).lineTo(config.width, top);
+    return g;
   }
 }
