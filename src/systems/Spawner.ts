@@ -12,7 +12,12 @@ export class Spawner {
       () => new Orb(),
       (orb) => {
         orb.visible = false;
-      }
-    )
+      },
+      24
+    );
+  }
+
+  reset(): void {
+    this.clear();
   }
 }
