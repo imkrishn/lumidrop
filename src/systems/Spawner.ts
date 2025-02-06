@@ -8,5 +8,11 @@ export class Spawner {
   private timer = 0;
 
   constructor(private layer: Container) {
+    this.pool = new ObjectPool(
+      () => new Orb(),
+      (orb) => {
+        orb.visible = false;
+      }
+    )
   }
 }
