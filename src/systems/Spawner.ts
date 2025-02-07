@@ -27,5 +27,9 @@ export class Spawner {
     this.timer -= dt;
     if (this.timer > 0) return;
     this.timer = Math.max(config.spawn.min, config.spawn.start - elapsed * config.spawn.ramp);
+    this.spawn(elapsed);
+  }
+
+  release(orb: Orb): void {
   }
 }
