@@ -38,5 +38,10 @@ export class Spawner {
   }
 
   clear(): void {
+    while (this.active.length) this.release(this.active[this.active.length - 1]);
+  }
+
+  private spawn(elapsed: number): void {
+    const orb = this.pool.acquire();
   }
 }
