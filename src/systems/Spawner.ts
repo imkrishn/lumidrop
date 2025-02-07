@@ -1,4 +1,5 @@
 import type { Container } from 'pixi.js';
+import { config } from '../config';
 import { ObjectPool } from '../core/ObjectPool';
 import { Orb } from '../entities/Orb';
 
@@ -23,5 +24,8 @@ export class Spawner {
   }
 
   update(dt: number, elapsed: number): void {
+    this.timer -= dt;
+    if (this.timer > 0) return;
+    this.timer = Math.max(config.spawn.min, config.spawn.start - elapsed * config.spawn.ramp);
   }
 }
