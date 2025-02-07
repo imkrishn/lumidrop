@@ -2,6 +2,7 @@ import type { Container } from 'pixi.js';
 import { config } from '../config';
 import { ObjectPool } from '../core/ObjectPool';
 import { Orb } from '../entities/Orb';
+import { rand } from '../utils/math';
 
 export class Spawner {
   readonly active: Orb[] = [];
@@ -43,5 +44,7 @@ export class Spawner {
 
   private spawn(elapsed: number): void {
     const orb = this.pool.acquire();
+    const boost = Math.min(elapsed * 3, 140);
+    const speed = rand(config.orb.minSpeed, config.orb.maxSpeed) + boost;
   }
 }
