@@ -31,5 +31,8 @@ export class Spawner {
   }
 
   release(orb: Orb): void {
+    const i = this.active.indexOf(orb);
+    if (i >= 0) this.active.splice(i, 1);
+    this.layer.removeChild(orb);
   }
 }
