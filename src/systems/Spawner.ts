@@ -46,5 +46,8 @@ export class Spawner {
     const orb = this.pool.acquire();
     const boost = Math.min(elapsed * 3, 140);
     const speed = rand(config.orb.minSpeed, config.orb.maxSpeed) + boost;
+    orb.configure(this.pickKind(elapsed), rand(40, config.width - 40), speed);
+    this.layer.addChild(orb);
+    this.active.push(orb);
   }
 }
