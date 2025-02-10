@@ -1,7 +1,7 @@
 import type { Container } from 'pixi.js';
 import { config } from '../config';
 import { ObjectPool } from '../core/ObjectPool';
-import { Orb } from '../entities/Orb';
+import { Orb, OrbKind } from '../entities/Orb';
 import { rand } from '../utils/math';
 
 export class Spawner {
@@ -49,5 +49,9 @@ export class Spawner {
     orb.configure(this.pickKind(elapsed), rand(40, config.width - 40), speed);
     this.layer.addChild(orb);
     this.active.push(orb);
+  }
+
+  private pickKind(elapsed: number): OrbKind {
+    const bombChance = Math.min(0.12 + elapsed * 0.002, 0.3);
   }
 }
