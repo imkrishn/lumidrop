@@ -53,5 +53,8 @@ export class Spawner {
 
   private pickKind(elapsed: number): OrbKind {
     const bombChance = Math.min(0.12 + elapsed * 0.002, 0.3);
+    const roll = Math.random();
+    if (roll < bombChance) return 'bomb';
+    return roll < bombChance + 0.25 ? 'gold' : 'cyan';
   }
 }
