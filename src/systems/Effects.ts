@@ -20,5 +20,11 @@ export class Effects {
   private active: Spark[] = [];
 
   constructor(private layer: Container, bus: EventBus<GameEvents>) {
+    this.pool = new ObjectPool(
+      () => new Spark(),
+      (s) => {
+        s.visible = false;
+      }
+    )
   }
 }
