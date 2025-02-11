@@ -8,5 +8,9 @@ class Spark extends Graphics {
 
   constructor() {
     super();
+    this.beginFill(0xffffff).drawCircle(0, 0, 3).endFill();
   }
+}
+
+export class Effects {
 }
