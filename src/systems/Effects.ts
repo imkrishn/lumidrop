@@ -32,4 +32,10 @@ export class Effects {
       this.burst(x, y, orbKinds[kind].color, kind === 'bomb' ? 28 : 14)
     );
   }
+
+  update(dt: number): void {
+    for (let i = this.active.length - 1; i >= 0; i--) {
+      const s = this.active[i];
+    }
+  }
 }
