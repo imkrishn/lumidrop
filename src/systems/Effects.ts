@@ -36,6 +36,9 @@ export class Effects {
   update(dt: number): void {
     for (let i = this.active.length - 1; i >= 0; i--) {
       const s = this.active[i];
+      s.life += dt;
+      if (s.life >= s.ttl) {
+      }
     }
   }
 }
