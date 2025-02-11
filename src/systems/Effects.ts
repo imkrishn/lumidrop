@@ -1,4 +1,7 @@
-import { Graphics } from 'pixi.js';
+import { Container, Graphics } from 'pixi.js';
+import type { EventBus } from '../core/EventBus';
+import type { GameEvents } from '../core/events';
+import { ObjectPool } from '../core/ObjectPool';
 
 class Spark extends Graphics {
   vx = 0;
@@ -13,4 +16,9 @@ class Spark extends Graphics {
 }
 
 export class Effects {
+  private pool: ObjectPool<Spark>;
+  private active: Spark[] = [];
+
+  constructor(private layer: Container, bus: EventBus<GameEvents>) {
+  }
 }
