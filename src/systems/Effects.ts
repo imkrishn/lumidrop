@@ -47,6 +47,8 @@ export class Effects {
       s.x += s.vx * dt;
       s.y += s.vy * dt;
       const left = 1 - s.life / s.ttl;
+      s.alpha = left;
+      s.scale.set(0.4 + left * 0.8);
     }
   }
 }
