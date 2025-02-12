@@ -38,6 +38,9 @@ export class Effects {
       const s = this.active[i];
       s.life += dt;
       if (s.life >= s.ttl) {
+        this.active.splice(i, 1);
+        this.layer.removeChild(s);
+        this.pool.release(s);
       }
     }
   }
