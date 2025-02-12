@@ -51,4 +51,9 @@ export class Effects {
       s.scale.set(0.4 + left * 0.8);
     }
   }
+
+  private burst(x: number, y: number, color: number, count: number): void {
+    for (let i = 0; i < count; i++) {
+    }
+  }
 }
