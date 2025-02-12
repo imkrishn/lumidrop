@@ -41,7 +41,9 @@ export class Effects {
         this.active.splice(i, 1);
         this.layer.removeChild(s);
         this.pool.release(s);
+        continue;
       }
+      s.vy += 380 * dt;
     }
   }
 }
