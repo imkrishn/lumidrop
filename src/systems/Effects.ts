@@ -44,6 +44,9 @@ export class Effects {
         continue;
       }
       s.vy += 380 * dt;
+      s.x += s.vx * dt;
+      s.y += s.vy * dt;
+      const left = 1 - s.life / s.ttl;
     }
   }
 }
