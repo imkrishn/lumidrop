@@ -3,6 +3,7 @@ import type { EventBus } from '../core/EventBus';
 import type { GameEvents } from '../core/events';
 import { ObjectPool } from '../core/ObjectPool';
 import { orbKinds } from '../entities/Orb';
+import { rand } from '../utils/math';
 
 class Spark extends Graphics {
   vx = 0;
@@ -54,6 +55,9 @@ export class Effects {
 
   private burst(x: number, y: number, color: number, count: number): void {
     for (let i = 0; i < count; i++) {
+      const s = this.pool.acquire();
+      const angle = rand(0, Math.PI * 2);
+      const power = rand(60, 240);
     }
   }
 }
