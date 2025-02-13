@@ -58,6 +58,8 @@ export class Effects {
       const s = this.pool.acquire();
       const angle = rand(0, Math.PI * 2);
       const power = rand(60, 240);
+      s.position.set(x, y);
+      s.vx = Math.cos(angle) * power;
     }
   }
 }
