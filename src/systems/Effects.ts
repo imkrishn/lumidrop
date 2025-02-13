@@ -60,6 +60,9 @@ export class Effects {
       const power = rand(60, 240);
       s.position.set(x, y);
       s.vx = Math.cos(angle) * power;
+      s.vy = Math.sin(angle) * power - 80;
+      s.life = 0;
+      s.ttl = rand(0.35, 0.8);
     }
   }
 }
