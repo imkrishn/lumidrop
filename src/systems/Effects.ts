@@ -63,6 +63,8 @@ export class Effects {
       s.vy = Math.sin(angle) * power - 80;
       s.life = 0;
       s.ttl = rand(0.35, 0.8);
+      s.tint = color;
+      s.alpha = 1;
     }
   }
 }
