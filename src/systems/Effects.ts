@@ -65,6 +65,9 @@ export class Effects {
       s.ttl = rand(0.35, 0.8);
       s.tint = color;
       s.alpha = 1;
+      s.visible = true;
+      this.layer.addChild(s);
+      this.active.push(s);
     }
   }
 }
