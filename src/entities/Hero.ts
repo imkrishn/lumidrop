@@ -23,5 +23,10 @@ export class Hero extends Container {
       this.doll = this.drawDoll();
       this.addChild(this.doll);
     }
+    this.reset();
+  }
+
+  // the y where falling orbs get caught
+  get padY(): number {
   }
 }
