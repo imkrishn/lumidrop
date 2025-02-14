@@ -13,5 +13,9 @@ export class Hero extends Container {
   private clock = 0;
 
   constructor(skeleton: ISkeletonData | null) {
+    super();
+    if (skeleton) {
+      this.spine = new Spine(skeleton);
+    }
   }
 }
