@@ -1,6 +1,7 @@
 import { Container, Graphics } from 'pixi.js';
 import { Spine } from 'pixi-spine';
 import type { ISkeletonData } from 'pixi-spine';
+import { config } from '../config';
 
 type Pose = 'idle' | 'move';
 
@@ -16,6 +17,8 @@ export class Hero extends Container {
     super();
     if (skeleton) {
       this.spine = new Spine(skeleton);
+      this.spine.scale.set(config.hero.spineScale);
+      this.addChild(this.spine);
     }
   }
 }
