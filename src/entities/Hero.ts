@@ -1,5 +1,6 @@
 import { Container, Graphics } from 'pixi.js';
 import { Spine } from 'pixi-spine';
+import type { ISkeletonData } from 'pixi-spine';
 
 type Pose = 'idle' | 'move';
 
@@ -9,4 +10,8 @@ export class Hero extends Container {
   private doll: Graphics | null = null;
   private pose: Pose | null = null;
   private facing = 1;
+  private clock = 0;
+
+  constructor(skeleton: ISkeletonData | null) {
+  }
 }
