@@ -19,6 +19,9 @@ export class Hero extends Container {
       this.spine = new Spine(skeleton);
       this.spine.scale.set(config.hero.spineScale);
       this.addChild(this.spine);
+    } else {
+      this.doll = this.drawDoll();
+      this.addChild(this.doll);
     }
   }
 }
