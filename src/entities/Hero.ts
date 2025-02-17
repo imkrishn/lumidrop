@@ -32,5 +32,8 @@ export class Hero extends Container {
   }
 
   reset(): void {
+    this.x = config.width / 2;
+    this.y = config.hero.y;
+    this.facing = 1;
   }
 }
