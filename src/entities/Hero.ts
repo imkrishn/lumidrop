@@ -39,5 +39,9 @@ export class Hero extends Container {
   }
 
   update(dt: number, dir: number): void {
+    this.clock += dt;
+    if (dir !== 0) this.facing = dir;
+
+    const limit = this.halfWidth + 10;
   }
 }
