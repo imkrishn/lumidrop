@@ -2,6 +2,7 @@ import { Container, Graphics } from 'pixi.js';
 import { Spine } from 'pixi-spine';
 import type { ISkeletonData } from 'pixi-spine';
 import { config } from '../config';
+import { clamp } from '../utils/math';
 
 type Pose = 'idle' | 'move';
 
@@ -43,5 +44,7 @@ export class Hero extends Container {
     if (dir !== 0) this.facing = dir;
 
     const limit = this.halfWidth + 10;
+    this.x = clamp(this.x + dir * config.hero.speed * dt, limit, config.width - limit);
+    this.setPose(dir === 0 ? 'idle' : 'move');
   }
 }
