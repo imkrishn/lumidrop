@@ -28,5 +28,9 @@ export class Hero extends Container {
 
   // the y where falling orbs get caught
   get padY(): number {
+    return this.y - config.hero.padHeight;
+  }
+
+  reset(): void {
   }
 }
