@@ -35,5 +35,9 @@ export class Hero extends Container {
     this.x = config.width / 2;
     this.y = config.hero.y;
     this.facing = 1;
+    this.setPose('idle');
+  }
+
+  update(dt: number, dir: number): void {
   }
 }
