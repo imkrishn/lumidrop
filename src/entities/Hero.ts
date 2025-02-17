@@ -46,5 +46,9 @@ export class Hero extends Container {
     const limit = this.halfWidth + 10;
     this.x = clamp(this.x + dir * config.hero.speed * dt, limit, config.width - limit);
     this.setPose(dir === 0 ? 'idle' : 'move');
+    this.bobDoll();
+
+    const view = this.spine ?? this.doll;
+    if (view) view.scale.x = Math.abs(view.scale.x) * this.facing;
   }
 }
