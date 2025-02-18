@@ -67,5 +67,9 @@ export class Hero extends Container {
     const rate = this.pose === 'move' ? 14 : 5;
     const wave = Math.sin(this.clock * rate);
     this.doll.y = wave * (this.pose === 'move' ? 3 : 2);
+    this.doll.scale.y = 1 + wave * 0.02;
+  }
+
+  private drawDoll(): Graphics {
   }
 }
