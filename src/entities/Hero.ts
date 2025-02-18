@@ -54,5 +54,8 @@ export class Hero extends Container {
 
   private setPose(pose: Pose): void {
     if (pose === this.pose) return;
+    this.pose = pose;
+    if (!this.spine) return;
+    const name = config.anim[pose];
   }
 }
