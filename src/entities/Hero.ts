@@ -57,5 +57,8 @@ export class Hero extends Container {
     this.pose = pose;
     if (!this.spine) return;
     const name = config.anim[pose];
+    if (this.spine.skeleton.data.findAnimation(name)) {
+      this.spine.state.setAnimation(0, name, true);
+    }
   }
 }
