@@ -64,5 +64,8 @@ export class Hero extends Container {
 
   private bobDoll(): void {
     if (!this.doll) return;
+    const rate = this.pose === 'move' ? 14 : 5;
+    const wave = Math.sin(this.clock * rate);
+    this.doll.y = wave * (this.pose === 'move' ? 3 : 2);
   }
 }
