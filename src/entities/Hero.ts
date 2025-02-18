@@ -51,4 +51,8 @@ export class Hero extends Container {
     const view = this.spine ?? this.doll;
     if (view) view.scale.x = Math.abs(view.scale.x) * this.facing;
   }
+
+  private setPose(pose: Pose): void {
+    if (pose === this.pose) return;
+  }
 }
