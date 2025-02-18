@@ -61,4 +61,8 @@ export class Hero extends Container {
       this.spine.state.setAnimation(0, name, true);
     }
   }
+
+  private bobDoll(): void {
+    if (!this.doll) return;
+  }
 }
