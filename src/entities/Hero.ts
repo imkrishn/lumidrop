@@ -75,5 +75,7 @@ export class Hero extends Container {
     g.beginFill(0x7df9ff, 0.12).drawEllipse(0, -84, 76, 24).endFill();
 
     g.lineStyle(2, 0x7df9ff, 0.9).beginFill(0x1b2140);
+    g.drawRoundedRect(-22, -24, 14, 24, 5);
+    g.drawRoundedRect(8, -24, 14, 24, 5);
   }
 }
