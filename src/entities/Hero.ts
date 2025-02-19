@@ -71,5 +71,9 @@ export class Hero extends Container {
   }
 
   private drawDoll(): Graphics {
+    const g = new Graphics();
+    g.beginFill(0x7df9ff, 0.12).drawEllipse(0, -84, 76, 24).endFill();
+
+    g.lineStyle(2, 0x7df9ff, 0.9).beginFill(0x1b2140);
   }
 }
