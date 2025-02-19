@@ -81,5 +81,8 @@ export class Hero extends Container {
     g.endFill();
 
     g.lineStyle(0).beginFill(0x7df9ff).drawRoundedRect(-18, -58, 36, 14, 7).endFill();
+    g.beginFill(0x0b0d1a).drawCircle(-7, -51, 2.5).drawCircle(7, -51, 2.5).endFill();
+
+    g.beginFill(0x1b2140).drawRect(-4, -80, 8, 12).endFill();
   }
 }
