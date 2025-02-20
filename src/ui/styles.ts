@@ -10,6 +10,8 @@ export const styles = {
     letterSpacing: 4,
     fill: ['#7df9ff', '#c77dff'],
     stroke: '#0b0d1a',
+    strokeThickness: 6,
+    dropShadow: true,
   }
   )
 }
