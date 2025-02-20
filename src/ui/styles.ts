@@ -12,6 +12,9 @@ export const styles = {
     stroke: '#0b0d1a',
     strokeThickness: 6,
     dropShadow: true,
+    dropShadowColor: '#7df9ff',
+    dropShadowBlur: 24,
+    dropShadowDistance: 0,
   }
   )
 }
