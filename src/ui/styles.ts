@@ -15,6 +15,9 @@ export const styles = {
     dropShadowColor: '#7df9ff',
     dropShadowBlur: 24,
     dropShadowDistance: 0,
+    dropShadowAlpha: 0.55
+  }),
+  heading: new TextStyle({
   }
   )
 }
