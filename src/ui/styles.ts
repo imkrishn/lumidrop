@@ -26,6 +26,10 @@ export const styles = {
   subtitle: new TextStyle({
     fontFamily: family,
     fontSize: 22,
+    fill: '#a9b4e8'
+  }),
+  hint: new TextStyle({
+    fontFamily: family,
   }
   )
 }
