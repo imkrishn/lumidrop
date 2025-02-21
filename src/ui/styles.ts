@@ -18,6 +18,9 @@ export const styles = {
     dropShadowAlpha: 0.55
   }),
   heading: new TextStyle({
+    fontFamily: family,
+    fontSize: 40,
+    fontWeight: '800',
   }
   )
 }
