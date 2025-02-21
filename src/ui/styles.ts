@@ -33,4 +33,9 @@ export const styles = {
     fontSize: 16,
     fill: '#6f7bb0'
   }),
+  button: new TextStyle({
+    fontFamily: family,
+    fontSize: 24,
+  }
+  )
 }
