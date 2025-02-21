@@ -21,6 +21,9 @@ export const styles = {
     fontFamily: family,
     fontSize: 40,
     fontWeight: '800',
+    fill: '#ffffff'
+  }),
+  subtitle: new TextStyle({
   }
   )
 }
