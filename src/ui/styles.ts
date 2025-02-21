@@ -30,6 +30,7 @@ export const styles = {
   }),
   hint: new TextStyle({
     fontFamily: family,
-  }
-  )
+    fontSize: 16,
+    fill: '#6f7bb0'
+  }),
 }
