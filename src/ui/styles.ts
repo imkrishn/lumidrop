@@ -44,6 +44,8 @@ export const styles = {
     fontSize: 44,
     fontWeight: '800',
     fill: '#ffffff',
+    dropShadow: true,
+    dropShadowColor: '#7df9ff',
   }
   )
 }
