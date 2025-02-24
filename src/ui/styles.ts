@@ -41,6 +41,9 @@ export const styles = {
   }),
   score: new TextStyle({
     fontFamily: family,
+    fontSize: 44,
+    fontWeight: '800',
+    fill: '#ffffff',
   }
   )
 }
