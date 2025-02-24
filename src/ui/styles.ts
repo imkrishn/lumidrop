@@ -50,4 +50,8 @@ export const styles = {
     dropShadowDistance: 0,
     dropShadowAlpha: 0.5
   }),
+  small: new TextStyle({
+    fontFamily: family,
+  }
+  )
 }
