@@ -39,4 +39,8 @@ export const styles = {
     fontWeight: '700',
     fill: '#7df9ff'
   }),
+  score: new TextStyle({
+    fontFamily: family,
+  }
+  )
 }
