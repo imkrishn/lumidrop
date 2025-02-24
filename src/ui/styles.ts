@@ -46,6 +46,8 @@ export const styles = {
     fill: '#ffffff',
     dropShadow: true,
     dropShadowColor: '#7df9ff',
-  }
-  )
+    dropShadowBlur: 10,
+    dropShadowDistance: 0,
+    dropShadowAlpha: 0.5
+  }),
 }
