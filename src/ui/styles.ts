@@ -36,6 +36,7 @@ export const styles = {
   button: new TextStyle({
     fontFamily: family,
     fontSize: 24,
-  }
-  )
+    fontWeight: '700',
+    fill: '#7df9ff'
+  }),
 }
