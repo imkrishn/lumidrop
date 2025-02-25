@@ -61,4 +61,9 @@ export const styles = {
     fontWeight: '900',
     fill: '#ffd166'
   }),
+  bigNumber: new TextStyle({
+    fontFamily: family,
+    fontSize: 78,
+  }
+  )
 }
