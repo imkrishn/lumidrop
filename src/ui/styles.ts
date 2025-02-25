@@ -52,6 +52,7 @@ export const styles = {
   }),
   small: new TextStyle({
     fontFamily: family,
-  }
-  )
+    fontSize: 16,
+    fill: '#8f9bd4'
+  }),
 }
