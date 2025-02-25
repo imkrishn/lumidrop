@@ -58,6 +58,7 @@ export const styles = {
   combo: new TextStyle({
     fontFamily: family,
     fontSize: 30,
-  }
-  )
+    fontWeight: '900',
+    fill: '#ffd166'
+  }),
 }
