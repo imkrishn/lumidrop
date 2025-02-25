@@ -66,6 +66,8 @@ export const styles = {
     fontSize: 78,
     fontWeight: '900',
     fill: '#ffffff',
+    dropShadow: true,
+    dropShadowColor: '#c77dff',
   }
   )
 }
