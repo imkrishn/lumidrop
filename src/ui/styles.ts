@@ -55,4 +55,9 @@ export const styles = {
     fontSize: 16,
     fill: '#8f9bd4'
   }),
+  combo: new TextStyle({
+    fontFamily: family,
+    fontSize: 30,
+  }
+  )
 }
