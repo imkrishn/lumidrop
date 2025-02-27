@@ -72,4 +72,8 @@ export const styles = {
     dropShadowDistance: 0,
     dropShadowAlpha: 0.7
   }),
+  flag: new TextStyle({
+    fontFamily: family,
+  }
+  )
 }
