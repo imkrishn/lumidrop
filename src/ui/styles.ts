@@ -74,6 +74,8 @@ export const styles = {
   }),
   flag: new TextStyle({
     fontFamily: family,
-  }
-  )
-}
+    fontSize: 22,
+    fontWeight: '800',
+    fill: '#ffd166'
+  })
+};
