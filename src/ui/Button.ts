@@ -15,5 +15,7 @@ export class Button extends Container {
     this.eventMode = 'static';
     this.cursor = 'pointer';
     this.on('pointerover', () => this.paint(true));
+    this.on('pointerout', () => this.paint(false));
+    this.on('pointertap', onClick);
   }
 }
