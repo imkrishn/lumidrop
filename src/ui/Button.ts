@@ -9,5 +9,7 @@ export class Button extends Container {
     super();
     this.label = new Text(text, styles.button.clone());
     this.label.anchor.set(0.5);
+    this.addChild(this.bg, this.label);
+    this.paint(false);
   }
 }
