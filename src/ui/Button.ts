@@ -11,5 +11,9 @@ export class Button extends Container {
     this.label.anchor.set(0.5);
     this.addChild(this.bg, this.label);
     this.paint(false);
+
+    this.eventMode = 'static';
+    this.cursor = 'pointer';
+    this.on('pointerover', () => this.paint(true));
   }
 }
