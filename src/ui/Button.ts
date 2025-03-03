@@ -18,4 +18,9 @@ export class Button extends Container {
     this.on('pointerout', () => this.paint(false));
     this.on('pointertap', onClick);
   }
+
+  private paint(hover: boolean): void {
+    this.bg.clear();
+    this.bg.lineStyle(2, 0x7df9ff);
+  }
 }
