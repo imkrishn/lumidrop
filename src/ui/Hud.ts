@@ -22,5 +22,8 @@ export class Hud extends Container {
       this.scoreText.text = String(n).padStart(6, '0');
     });
     bus.on('livesChanged', (n) => this.drawHearts(n));
+    bus.on('comboChanged', (n) => {
+      this.comboText.text = n > 1 ? `x${n}` : '';
+    });
   }
 }
