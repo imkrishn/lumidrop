@@ -20,7 +20,7 @@ export class Hud extends Container {
 
     bus.on('scoreChanged', (n) => {
       this.scoreText.text = String(n).padStart(6, '0');
-    }
-    )
+    });
+    bus.on('livesChanged', (n) => this.drawHearts(n));
   }
 }
