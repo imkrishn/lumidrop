@@ -26,4 +26,8 @@ export class Hud extends Container {
       this.comboText.text = n > 1 ? `x${n}` : '';
     });
   }
+
+  setBest(best: number): void {
+    this.bestText.text = `best ${best}`;
+  }
 }
