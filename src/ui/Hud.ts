@@ -1,4 +1,5 @@
 import { Container, Graphics, Text } from 'pixi.js';
+import { config } from '../config';
 import type { EventBus } from '../core/EventBus';
 import type { GameEvents } from '../core/events';
 import { styles } from './styles';
@@ -13,5 +14,7 @@ export class Hud extends Container {
     super();
     this.scoreText.position.set(28, 16);
     this.bestText.position.set(30, 68);
+    this.comboText.anchor.set(0.5, 0);
+    this.comboText.position.set(config.width / 2, 20);
   }
 }
