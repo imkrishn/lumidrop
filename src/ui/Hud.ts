@@ -16,5 +16,11 @@ export class Hud extends Container {
     this.bestText.position.set(30, 68);
     this.comboText.anchor.set(0.5, 0);
     this.comboText.position.set(config.width / 2, 20);
+    this.addChild(this.scoreText, this.bestText, this.comboText, this.hearts);
+
+    bus.on('scoreChanged', (n) => {
+      this.scoreText.text = String(n).padStart(6, '0');
+    }
+    )
   }
 }
