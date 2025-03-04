@@ -11,5 +11,7 @@ export class Hud extends Container {
 
   constructor(bus: EventBus<GameEvents>) {
     super();
+    this.scoreText.position.set(28, 16);
+    this.bestText.position.set(30, 68);
   }
 }
