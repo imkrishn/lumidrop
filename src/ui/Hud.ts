@@ -38,6 +38,9 @@ export class Hud extends Container {
       const x = config.width - 40 - i * 38;
       const on = i < lives;
       g.beginFill(on ? 0xff4d6d : 0x2a2f55);
+      g.drawCircle(x - 6, 26, 8).drawCircle(x + 6, 26, 8);
+      g.drawPolygon([x - 13.5, 29, x + 13.5, 29, x, 45]);
+      g.endFill();
     }
   }
 }
