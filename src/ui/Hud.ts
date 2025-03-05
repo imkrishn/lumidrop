@@ -36,6 +36,8 @@ export class Hud extends Container {
     g.clear();
     for (let i = 0; i < config.lives; i++) {
       const x = config.width - 40 - i * 38;
+      const on = i < lives;
+      g.beginFill(on ? 0xff4d6d : 0x2a2f55);
     }
   }
 }
