@@ -33,5 +33,9 @@ export class Hud extends Container {
 
   private drawHearts(lives: number): void {
     const g = this.hearts;
+    g.clear();
+    for (let i = 0; i < config.lives; i++) {
+      const x = config.width - 40 - i * 38;
+    }
   }
 }
