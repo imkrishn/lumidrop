@@ -30,4 +30,8 @@ export class Hud extends Container {
   setBest(best: number): void {
     this.bestText.text = `best ${best}`;
   }
+
+  private drawHearts(lives: number): void {
+    const g = this.hearts;
+  }
 }
