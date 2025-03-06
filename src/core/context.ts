@@ -1,8 +1,10 @@
 import type { EventBus } from './EventBus';
 import type { GameEvents } from './events';
 import type { StateMachine } from './StateMachine';
+import type { Effects } from '../systems/Effects';
 import type { InputSystem } from '../systems/InputSystem';
 import type { ScoreSystem } from '../systems/ScoreSystem';
+import type { Spawner } from '../systems/Spawner';
 
 export type StateKey = 'menu' | 'play' | 'over';
 
@@ -11,4 +13,6 @@ export interface GameContext {
   machine: StateMachine<StateKey>;
   score: ScoreSystem;
   input: InputSystem;
+  spawner: Spawner;
+  effects: Effects;
 }
