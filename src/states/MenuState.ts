@@ -29,5 +29,11 @@ export class MenuState implements State {
     const hint = new Text('arrow keys or a / d to move, or drag. enter starts.', styles.hint);
     hint.anchor.set(0.5);
     hint.position.set(cx, 418);
+
+    this.root.addChild(this.title, tagline, this.bestText, play, hint);
+  }
+
+  enter(): void {
+    this.bestText.text = this.ctx.score.best > 0 ? `best run ${this.ctx.score.best}` : 'no runs yet';
   }
 }
