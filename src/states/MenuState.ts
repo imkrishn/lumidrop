@@ -27,5 +27,7 @@ export class MenuState implements State {
     play.position.set(cx, 352);
 
     const hint = new Text('arrow keys or a / d to move, or drag. enter starts.', styles.hint);
+    hint.anchor.set(0.5);
+    hint.position.set(cx, 418);
   }
 }
