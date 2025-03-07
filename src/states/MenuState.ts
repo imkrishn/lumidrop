@@ -18,5 +18,8 @@ export class MenuState implements State {
     const tagline = new Text('catch the light, dodge the bombs', styles.subtitle);
     tagline.anchor.set(0.5);
     tagline.position.set(cx, 232);
+
+    this.bestText.anchor.set(0.5);
+    this.bestText.position.set(cx, 272);
   }
 }
