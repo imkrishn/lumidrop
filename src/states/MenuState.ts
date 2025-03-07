@@ -12,5 +12,7 @@ export class MenuState implements State {
 
   constructor(private ctx: GameContext) {
     const cx = config.width / 2;
+    this.title.anchor.set(0.5);
+    this.title.position.set(cx, 150);
   }
 }
