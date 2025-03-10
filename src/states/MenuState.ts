@@ -35,5 +35,7 @@ export class MenuState implements State {
 
   enter(): void {
     this.bestText.text = this.ctx.score.best > 0 ? `best run ${this.ctx.score.best}` : 'no runs yet';
+    this.ctx.hero.reset();
+    this.ctx.ui.addChild(this.root);
   }
 }
