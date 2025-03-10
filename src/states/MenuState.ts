@@ -46,5 +46,10 @@ export class MenuState implements State {
   update(dt: number): void {
     this.clock += dt;
     this.title.y = 150 + Math.sin(this.clock * 2) * 6;
+    this.ctx.hero.update(dt, 0);
+  }
+
+  confirm(): void {
+    this.ctx.machine.change('play');
   }
 }
