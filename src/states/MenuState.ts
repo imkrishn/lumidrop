@@ -38,4 +38,11 @@ export class MenuState implements State {
     this.ctx.hero.reset();
     this.ctx.ui.addChild(this.root);
   }
+
+  exit(): void {
+    this.ctx.ui.removeChild(this.root);
+  }
+
+  update(dt: number): void {
+  }
 }
