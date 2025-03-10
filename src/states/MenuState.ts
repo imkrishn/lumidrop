@@ -44,5 +44,7 @@ export class MenuState implements State {
   }
 
   update(dt: number): void {
+    this.clock += dt;
+    this.title.y = 150 + Math.sin(this.clock * 2) * 6;
   }
 }
