@@ -17,5 +17,7 @@ export class PlayState implements State {
     this.shake = 0;
     score.reset();
     hero.reset();
+    spawner.reset();
+    this.hud.setBest(score.best);
   }
 }
