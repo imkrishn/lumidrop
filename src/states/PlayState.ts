@@ -19,5 +19,10 @@ export class PlayState implements State {
     hero.reset();
     spawner.reset();
     this.hud.setBest(score.best);
+    ui.addChild(this.hud);
+  }
+
+  exit(): void {
+    this.ctx.spawner.clear();
   }
 }
