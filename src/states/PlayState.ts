@@ -12,5 +12,7 @@ export class PlayState implements State {
   }
 
   enter(): void {
+    const { score, hero, spawner, ui } = this.ctx;
+    this.elapsed = 0;
   }
 }
