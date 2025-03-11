@@ -24,5 +24,7 @@ export class PlayState implements State {
 
   exit(): void {
     this.ctx.spawner.clear();
+    this.ctx.ui.removeChild(this.hud);
+    this.ctx.world.position.set(0, 0);
   }
 }
