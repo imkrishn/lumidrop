@@ -14,5 +14,8 @@ export class PlayState implements State {
   enter(): void {
     const { score, hero, spawner, ui } = this.ctx;
     this.elapsed = 0;
+    this.shake = 0;
+    score.reset();
+    hero.reset();
   }
 }
