@@ -43,7 +43,11 @@ export class PlayState implements State {
       if (this.touchesPad(orb)) {
         this.catchOrb(orb);
       } else if (orb.y > config.floorY) {
+        if (orb.kind !== 'bomb') score.loseLife();
+        spawner.release(orb);
       }
     }
+
+    this.applyShake(dt);
   }
 }
