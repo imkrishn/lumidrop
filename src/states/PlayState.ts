@@ -27,4 +27,9 @@ export class PlayState implements State {
     this.ctx.ui.removeChild(this.hud);
     this.ctx.world.position.set(0, 0);
   }
+
+  update(dt: number): void {
+    const { hero, input, spawner, score, machine } = this.ctx;
+    this.elapsed += dt;
+  }
 }
