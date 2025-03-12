@@ -34,5 +34,10 @@ export class PlayState implements State {
 
     hero.update(dt, input.direction(hero.x));
     spawner.update(dt, this.elapsed);
+
+    const list = spawner.active;
+    for (let i = list.length - 1; i >= 0; i--) {
+      const orb = list[i];
+    }
   }
 }
