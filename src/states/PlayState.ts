@@ -31,5 +31,8 @@ export class PlayState implements State {
   update(dt: number): void {
     const { hero, input, spawner, score, machine } = this.ctx;
     this.elapsed += dt;
+
+    hero.update(dt, input.direction(hero.x));
+    spawner.update(dt, this.elapsed);
   }
 }
