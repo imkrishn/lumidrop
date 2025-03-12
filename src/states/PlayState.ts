@@ -38,6 +38,9 @@ export class PlayState implements State {
     const list = spawner.active;
     for (let i = list.length - 1; i >= 0; i--) {
       const orb = list[i];
+      orb.update(dt);
+      if (this.touchesPad(orb)) {
+      }
     }
   }
 }
