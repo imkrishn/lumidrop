@@ -1,3 +1,4 @@
+import { config } from '../config';
 import type { GameContext } from '../core/context';
 import type { State } from '../core/StateMachine';
 import { Hud } from '../ui/Hud';
@@ -40,6 +41,8 @@ export class PlayState implements State {
       const orb = list[i];
       orb.update(dt);
       if (this.touchesPad(orb)) {
+        this.catchOrb(orb);
+      } else if (orb.y > config.floorY) {
       }
     }
   }
