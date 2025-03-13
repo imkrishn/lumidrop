@@ -59,5 +59,7 @@ export class PlayState implements State {
 
   private touchesPad(orb: Orb): boolean {
     const { hero } = this.ctx;
+    const near = Math.abs(orb.x - hero.x) < hero.halfWidth + orb.radius * 0.7;
+    return near && orb.y >= hero.padY - 14 && orb.y <= hero.padY + 36;
   }
 }
