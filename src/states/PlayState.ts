@@ -62,4 +62,9 @@ export class PlayState implements State {
     const near = Math.abs(orb.x - hero.x) < hero.halfWidth + orb.radius * 0.7;
     return near && orb.y >= hero.padY - 14 && orb.y <= hero.padY + 36;
   }
+
+  private catchOrb(orb: Orb): void {
+    const { bus, score, spawner } = this.ctx;
+    bus.emit('orbCaught', { x: orb.x, y: orb.y, kind: orb.kind });
+  }
 }
