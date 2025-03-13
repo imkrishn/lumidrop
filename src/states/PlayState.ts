@@ -49,5 +49,9 @@ export class PlayState implements State {
     }
 
     this.applyShake(dt);
+
+    if (score.dead) {
+      score.finish();
+    }
   }
 }
