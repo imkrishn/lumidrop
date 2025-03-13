@@ -1,7 +1,7 @@
 import { config } from '../config';
 import type { GameContext } from '../core/context';
 import type { State } from '../core/StateMachine';
-import { Orb } from '../entities/Orb';
+import { Orb, orbKinds } from '../entities/Orb';
 import { Hud } from '../ui/Hud';
 
 export class PlayState implements State {
@@ -68,6 +68,9 @@ export class PlayState implements State {
     bus.emit('orbCaught', { x: orb.x, y: orb.y, kind: orb.kind });
     if (orb.kind === 'bomb') {
       score.loseLife();
+      this.shake = 0.4;
+    } else {
+      score.collect(orbKinds[orb.kind].points);
     }
   }
 }
