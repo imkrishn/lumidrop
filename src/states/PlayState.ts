@@ -1,6 +1,7 @@
 import { config } from '../config';
 import type { GameContext } from '../core/context';
 import type { State } from '../core/StateMachine';
+import { Orb } from '../entities/Orb';
 import { Hud } from '../ui/Hud';
 
 export class PlayState implements State {
@@ -52,6 +53,11 @@ export class PlayState implements State {
 
     if (score.dead) {
       score.finish();
+      machine.change('over');
     }
+  }
+
+  private touchesPad(orb: Orb): boolean {
+    const { hero } = this.ctx;
   }
 }
