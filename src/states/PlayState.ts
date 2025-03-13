@@ -66,5 +66,8 @@ export class PlayState implements State {
   private catchOrb(orb: Orb): void {
     const { bus, score, spawner } = this.ctx;
     bus.emit('orbCaught', { x: orb.x, y: orb.y, kind: orb.kind });
+    if (orb.kind === 'bomb') {
+      score.loseLife();
+    }
   }
 }
