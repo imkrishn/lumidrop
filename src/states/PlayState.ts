@@ -72,5 +72,9 @@ export class PlayState implements State {
     } else {
       score.collect(orbKinds[orb.kind].points);
     }
+    spawner.release(orb);
+  }
+
+  private applyShake(dt: number): void {
   }
 }
