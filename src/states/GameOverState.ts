@@ -1,4 +1,4 @@
-import { Container, Text } from 'pixi.js';
+import { Container, Graphics, Text } from 'pixi.js';
 import { config } from '../config';
 import type { GameContext } from '../core/context';
 import type { State } from '../core/StateMachine';
@@ -12,5 +12,8 @@ export class GameOverState implements State {
 
   constructor(private ctx: GameContext) {
     const cx = config.width / 2;
+    const cy = config.height / 2;
+
+    const dim = new Graphics();
   }
 }
