@@ -3,6 +3,7 @@ import type { GameContext } from '../core/context';
 import type { State } from '../core/StateMachine';
 import { Orb, orbKinds } from '../entities/Orb';
 import { Hud } from '../ui/Hud';
+import { rand } from '../utils/math';
 
 export class PlayState implements State {
   private hud: Hud;
@@ -76,5 +77,8 @@ export class PlayState implements State {
   }
 
   private applyShake(dt: number): void {
+    this.shake = Math.max(0, this.shake - dt);
+    const power = this.shake * 18;
+    this.ctx.world.position.set(rand(-power, power), rand(-power, power));
   }
 }
