@@ -29,5 +29,7 @@ export class GameOverState implements State {
     this.scoreText.position.set(cx, cy - 46);
     this.bestText.anchor.set(0.5);
     this.bestText.position.set(cx, cy + 14);
+    this.flag.anchor.set(0.5);
+    this.flag.position.set(cx, cy + 50);
   }
 }
