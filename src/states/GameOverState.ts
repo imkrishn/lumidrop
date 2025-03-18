@@ -2,6 +2,7 @@ import { Container, Graphics, Text } from 'pixi.js';
 import { config } from '../config';
 import type { GameContext } from '../core/context';
 import type { State } from '../core/StateMachine';
+import { createPanel } from '../ui/panel';
 import { styles } from '../ui/styles';
 
 export class GameOverState implements State {
@@ -15,5 +16,9 @@ export class GameOverState implements State {
     const cy = config.height / 2;
 
     const dim = new Graphics();
+    dim.beginFill(0x05060f, 0.6).drawRect(0, 0, config.width, config.height).endFill();
+
+    const panel = createPanel(480, 360);
+    panel.position.set(cx, cy);
   }
 }
