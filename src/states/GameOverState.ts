@@ -20,5 +20,8 @@ export class GameOverState implements State {
 
     const panel = createPanel(480, 360);
     panel.position.set(cx, cy);
+
+    const heading = new Text('run over', styles.heading);
+    heading.anchor.set(0.5);
   }
 }
