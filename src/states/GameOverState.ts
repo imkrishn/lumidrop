@@ -23,5 +23,8 @@ export class GameOverState implements State {
 
     const heading = new Text('run over', styles.heading);
     heading.anchor.set(0.5);
+    heading.position.set(cx, cy - 126);
+
+    this.scoreText.anchor.set(0.5);
   }
 }
