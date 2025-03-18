@@ -2,6 +2,7 @@ import { Container, Graphics, Text } from 'pixi.js';
 import { config } from '../config';
 import type { GameContext } from '../core/context';
 import type { State } from '../core/StateMachine';
+import { Button } from '../ui/Button';
 import { createPanel } from '../ui/panel';
 import { styles } from '../ui/styles';
 
@@ -31,5 +32,10 @@ export class GameOverState implements State {
     this.bestText.position.set(cx, cy + 14);
     this.flag.anchor.set(0.5);
     this.flag.position.set(cx, cy + 50);
+
+    const again = new Button('play again', () => ctx.machine.change('play'));
+    again.position.set(cx, cy + 118);
+
+    this.root.addChild(dim, panel, heading, this.scoreText, this.bestText, this.flag, again);
   }
 }
