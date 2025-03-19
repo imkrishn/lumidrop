@@ -48,5 +48,9 @@ export class GameOverState implements State {
   }
 
   exit(): void {
+    this.ctx.ui.removeChild(this.root);
+  }
+
+  update(dt: number): void {
   }
 }
