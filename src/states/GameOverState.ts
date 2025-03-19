@@ -52,5 +52,10 @@ export class GameOverState implements State {
   }
 
   update(dt: number): void {
+    this.ctx.hero.update(dt, 0);
+  }
+
+  confirm(): void {
+    this.ctx.machine.change('play');
   }
 }
