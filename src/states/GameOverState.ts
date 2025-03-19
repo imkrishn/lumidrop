@@ -38,4 +38,8 @@ export class GameOverState implements State {
 
     this.root.addChild(dim, panel, heading, this.scoreText, this.bestText, this.flag, again);
   }
+
+  enter(): void {
+    const { score, ui } = this.ctx;
+  }
 }
