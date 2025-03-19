@@ -41,5 +41,7 @@ export class GameOverState implements State {
 
   enter(): void {
     const { score, ui } = this.ctx;
+    this.scoreText.text = String(score.score);
+    this.bestText.text = `best ${score.best}`;
   }
 }
