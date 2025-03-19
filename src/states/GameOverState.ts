@@ -43,5 +43,10 @@ export class GameOverState implements State {
     const { score, ui } = this.ctx;
     this.scoreText.text = String(score.score);
     this.bestText.text = `best ${score.best}`;
+    this.flag.visible = score.newBest;
+    ui.addChild(this.root);
+  }
+
+  exit(): void {
   }
 }
