@@ -1,7 +1,10 @@
 import { Application } from 'pixi.js';
+import { config } from '../config';
 
 export class Game {
   private app = new Application<HTMLCanvasElement>({
+    width: config.width,
+    height: config.height,
   }
   )
 }
