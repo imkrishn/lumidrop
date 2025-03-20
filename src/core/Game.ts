@@ -5,6 +5,9 @@ export class Game {
   private app = new Application<HTMLCanvasElement>({
     width: config.width,
     height: config.height,
+    backgroundColor: config.background,
+    antialias: true,
+    autoDensity: true,
   }
   )
 }
