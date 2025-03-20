@@ -8,6 +8,8 @@ export class Game {
     backgroundColor: config.background,
     antialias: true,
     autoDensity: true,
-  }
-  )
+    resolution: Math.min(window.devicePixelRatio || 1, 2)
+  });
+
+  constructor(private host: HTMLElement) {}
 }
