@@ -1,6 +1,8 @@
 import { Application } from 'pixi.js';
 import { config } from '../config';
 import { loadSkeleton } from './Assets';
+import { EventBus } from './EventBus';
+import type { GameEvents } from './events';
 
 export class Game {
   private app = new Application<HTMLCanvasElement>({
@@ -20,5 +22,9 @@ export class Game {
 
     this.host.querySelector('#boot')?.remove();
     this.host.appendChild(canvas);
+    this.fit();
+    window.addEventListener('resize', () => this.fit());
+
+    const bus = new EventBus<GameEvents>();
   }
 }
