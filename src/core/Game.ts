@@ -1,5 +1,6 @@
 import { Application } from 'pixi.js';
 import { config } from '../config';
+import { loadSkeleton } from './Assets';
 
 export class Game {
   private app = new Application<HTMLCanvasElement>({
@@ -12,4 +13,9 @@ export class Game {
   });
 
   constructor(private host: HTMLElement) {}
+
+  async start(): Promise<void> {
+    const canvas = this.app.view;
+    const skeleton = await loadSkeleton(config.spineAsset);
+  }
 }
