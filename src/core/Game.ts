@@ -17,5 +17,8 @@ export class Game {
   async start(): Promise<void> {
     const canvas = this.app.view;
     const skeleton = await loadSkeleton(config.spineAsset);
+
+    this.host.querySelector('#boot')?.remove();
+    this.host.appendChild(canvas);
   }
 }
