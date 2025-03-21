@@ -2,9 +2,12 @@ import { Application, Container } from 'pixi.js';
 import { config } from '../config';
 import { Backdrop } from '../entities/Backdrop';
 import { Hero } from '../entities/Hero';
+import { InputSystem } from '../systems/InputSystem';
 import { loadSkeleton } from './Assets';
+import type { StateKey } from './context';
 import { EventBus } from './EventBus';
 import type { GameEvents } from './events';
+import { StateMachine } from './StateMachine';
 
 export class Game {
   private app = new Application<HTMLCanvasElement>({
@@ -36,5 +39,9 @@ export class Game {
     const hero = new Hero(skeleton);
 
     world.addChild(backdrop, orbLayer, hero, fxLayer);
+    this.app.stage.addChild(world, ui);
+
+    const machine = new StateMachine<StateKey>();
+    const input = new InputSystem(canvas);
   }
 }
