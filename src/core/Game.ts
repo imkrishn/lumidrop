@@ -1,5 +1,6 @@
 import { Application, Container } from 'pixi.js';
 import { config } from '../config';
+import { Backdrop } from '../entities/Backdrop';
 import { loadSkeleton } from './Assets';
 import { EventBus } from './EventBus';
 import type { GameEvents } from './events';
@@ -28,5 +29,8 @@ export class Game {
     const bus = new EventBus<GameEvents>();
     const world = new Container();
     const ui = new Container();
+    const orbLayer = new Container();
+    const fxLayer = new Container();
+    const backdrop = new Backdrop();
   }
 }
