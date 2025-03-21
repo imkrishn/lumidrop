@@ -4,6 +4,7 @@ import { Backdrop } from '../entities/Backdrop';
 import { Hero } from '../entities/Hero';
 import { Effects } from '../systems/Effects';
 import { InputSystem } from '../systems/InputSystem';
+import { ScoreSystem } from '../systems/ScoreSystem';
 import { loadSkeleton } from './Assets';
 import type { GameContext, StateKey } from './context';
 import { EventBus } from './EventBus';
@@ -47,6 +48,9 @@ export class Game {
     const effects = new Effects(fxLayer, bus);
 
     const ctx: GameContext = {
+      bus,
+      machine,
+      score: new ScoreSystem(bus),
     }
   }
 }
