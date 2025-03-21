@@ -1,4 +1,4 @@
-import { Application } from 'pixi.js';
+import { Application, Container } from 'pixi.js';
 import { config } from '../config';
 import { loadSkeleton } from './Assets';
 import { EventBus } from './EventBus';
@@ -26,5 +26,7 @@ export class Game {
     window.addEventListener('resize', () => this.fit());
 
     const bus = new EventBus<GameEvents>();
+    const world = new Container();
+    const ui = new Container();
   }
 }
