@@ -2,9 +2,10 @@ import { Application, Container } from 'pixi.js';
 import { config } from '../config';
 import { Backdrop } from '../entities/Backdrop';
 import { Hero } from '../entities/Hero';
+import { Effects } from '../systems/Effects';
 import { InputSystem } from '../systems/InputSystem';
 import { loadSkeleton } from './Assets';
-import type { StateKey } from './context';
+import type { GameContext, StateKey } from './context';
 import { EventBus } from './EventBus';
 import type { GameEvents } from './events';
 import { StateMachine } from './StateMachine';
@@ -43,5 +44,9 @@ export class Game {
 
     const machine = new StateMachine<StateKey>();
     const input = new InputSystem(canvas);
+    const effects = new Effects(fxLayer, bus);
+
+    const ctx: GameContext = {
+    }
   }
 }
