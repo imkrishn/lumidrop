@@ -72,6 +72,8 @@ export class Game {
     machine.change('menu');
 
     this.app.ticker.add(() => {
+      const dt = Math.min(this.app.ticker.deltaMS / 1000, 0.05);
+      backdrop.update(dt);
     }
     )
   }
