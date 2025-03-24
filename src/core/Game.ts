@@ -54,6 +54,9 @@ export class Game {
       score: new ScoreSystem(bus),
       input,
       spawner: new Spawner(orbLayer),
+      effects,
+      hero,
+      world,
     }
   }
 }
