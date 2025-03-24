@@ -67,5 +67,12 @@ export class Game {
       .register('menu', new MenuState(ctx))
       .register('play', new PlayState(ctx))
       .register('over', new GameOverState(ctx));
+
+    input.onConfirm = () => machine.confirm();
+    machine.change('menu');
+
+    this.app.ticker.add(() => {
+    }
+    )
   }
 }
