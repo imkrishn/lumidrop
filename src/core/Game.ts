@@ -2,6 +2,9 @@ import { Application, Container } from 'pixi.js';
 import { config } from '../config';
 import { Backdrop } from '../entities/Backdrop';
 import { Hero } from '../entities/Hero';
+import { GameOverState } from '../states/GameOverState';
+import { MenuState } from '../states/MenuState';
+import { PlayState } from '../states/PlayState';
 import { Effects } from '../systems/Effects';
 import { InputSystem } from '../systems/InputSystem';
 import { ScoreSystem } from '../systems/ScoreSystem';
@@ -57,6 +60,12 @@ export class Game {
       effects,
       hero,
       world,
-    }
+      ui
+    };
+
+    machine
+      .register('menu', new MenuState(ctx))
+      .register('play', new PlayState(ctx))
+      .register('over', new GameOverState(ctx));
   }
 }
