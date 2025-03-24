@@ -5,6 +5,7 @@ import { Hero } from '../entities/Hero';
 import { Effects } from '../systems/Effects';
 import { InputSystem } from '../systems/InputSystem';
 import { ScoreSystem } from '../systems/ScoreSystem';
+import { Spawner } from '../systems/Spawner';
 import { loadSkeleton } from './Assets';
 import type { GameContext, StateKey } from './context';
 import { EventBus } from './EventBus';
@@ -51,6 +52,8 @@ export class Game {
       bus,
       machine,
       score: new ScoreSystem(bus),
+      input,
+      spawner: new Spawner(orbLayer),
     }
   }
 }
