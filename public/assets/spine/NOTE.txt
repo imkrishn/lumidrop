@@ -1,0 +1,2 @@
+drop your spine export here, named:
+  hero.json   (skeleton)
