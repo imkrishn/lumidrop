@@ -81,5 +81,8 @@ export class Game {
 
   private fit(): void {
     const scale = Math.min(window.innerWidth / config.width, window.innerHeight / config.height) * 0.96;
+    const style = this.app.view.style;
+    style.width = `${Math.floor(config.width * scale)}px`;
+    style.height = `${Math.floor(config.height * scale)}px`;
   }
 }
