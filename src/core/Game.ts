@@ -78,4 +78,8 @@ export class Game {
       effects.update(dt);
     });
   }
+
+  private fit(): void {
+    const scale = Math.min(window.innerWidth / config.width, window.innerHeight / config.height) * 0.96;
+  }
 }
