@@ -20,3 +20,7 @@ npm run build
 controls: arrow keys or a / d, or press and drag on touch screens. enter or space starts a run.
 
 ## spine character
+
+the hero is a spine skeleton loaded with pixi-spine. drop an export into `public/assets/spine/` as `hero.json`, `hero.atlas` and `hero.png`. animation names are set in `src/config.ts`. if the files are missing the game falls back to a drawn robot so it always runs.
+
+the free spineboy example from esoteric software works fine for testing.
