@@ -16,3 +16,7 @@ production build:
 ```
 npm run build
 ```
+
+controls: arrow keys or a / d, or press and drag on touch screens. enter or space starts a run.
+
+## spine character
