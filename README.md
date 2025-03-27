@@ -41,3 +41,8 @@ src/
 | state | `StateMachine`, `states/` | each screen owns its own enter / exit / update, no giant switch |
 | observer | `EventBus` | score, hud and effects react to events without knowing each other |
 | object pool | `ObjectPool`, `Spawner`, `Effects` | orbs and sparks get reused instead of allocated every spawn |
+| dependency injection | `GameContext` | states get what they need from one object, easy to swap in tests |
+
+some choices worth talking about:
+
+- systems do one job each. `ScoreSystem` knows nothing about pixi, `Spawner` knows nothing about scoring.
