@@ -48,3 +48,6 @@ some choices worth talking about:
 - systems do one job each. `ScoreSystem` knows nothing about pixi, `Spawner` knows nothing about scoring.
 - the event bus is typed, so emitting `orbCaught` with the wrong payload is a compile error.
 - `Hero` hides whether it is a spine skeleton or a drawn doll. the rest of the game only calls `update` and `reset`.
+- difficulty comes from two numbers in `config.ts` (spawn interval and fall speed), so tuning does not touch logic.
+
+## things i would add next
