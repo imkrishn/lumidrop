@@ -37,3 +37,5 @@ src/
 ```
 
 | pattern | where | why |
+| --- | --- | --- |
+| state | `StateMachine`, `states/` | each screen owns its own enter / exit / update, no giant switch |
