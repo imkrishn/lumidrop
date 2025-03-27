@@ -39,3 +39,5 @@ src/
 | pattern | where | why |
 | --- | --- | --- |
 | state | `StateMachine`, `states/` | each screen owns its own enter / exit / update, no giant switch |
+| observer | `EventBus` | score, hud and effects react to events without knowing each other |
+| object pool | `ObjectPool`, `Spawner`, `Effects` | orbs and sparks get reused instead of allocated every spawn |
