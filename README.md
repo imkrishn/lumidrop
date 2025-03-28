@@ -51,3 +51,7 @@ some choices worth talking about:
 - difficulty comes from two numbers in `config.ts` (spawn interval and fall speed), so tuning does not touch logic.
 
 ## things i would add next
+
+- sound and a mute toggle
+- unit tests for the pool, event bus and score multiplier
+- a power up orb that widens the pad for a few seconds
