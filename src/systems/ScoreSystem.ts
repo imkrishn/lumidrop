@@ -2,7 +2,7 @@ import { config } from '../config';
 import type { EventBus } from '../core/EventBus';
 import type { GameEvents } from '../core/events';
 
-const BEST_KEY = 'glowfall.best';
+const BEST_KEY = 'lumidrop.best';
 
 export class ScoreSystem {
   score = 0;
