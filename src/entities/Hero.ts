@@ -41,8 +41,10 @@ export class Hero extends Container {
 
   update(dt: number, dir: number): void {
     this.clock += dt;
+    // remember the last direction so we keep facing it
     if (dir !== 0) this.facing = dir;
 
+    // keep the pad inside the screen
     const limit = this.halfWidth + 10;
     this.x = clamp(this.x + dir * config.hero.speed * dt, limit, config.width - limit);
     this.setPose(dir === 0 ? 'idle' : 'move');
@@ -72,17 +74,21 @@ export class Hero extends Container {
 
   private drawDoll(): Graphics {
     const g = new Graphics();
+    // soft glow behind the pad
     g.beginFill(0x7df9ff, 0.12).drawEllipse(0, -84, 76, 24).endFill();
 
+    // legs and body
     g.lineStyle(2, 0x7df9ff, 0.9).beginFill(0x1b2140);
     g.drawRoundedRect(-22, -24, 14, 24, 5);
     g.drawRoundedRect(8, -24, 14, 24, 5);
     g.drawRoundedRect(-28, -70, 56, 50, 14);
     g.endFill();
 
+    // visor and eyes
     g.lineStyle(0).beginFill(0x7df9ff).drawRoundedRect(-18, -58, 36, 14, 7).endFill();
     g.beginFill(0x0b0d1a).drawCircle(-7, -51, 2.5).drawCircle(7, -51, 2.5).endFill();
 
+    // antenna stem and the catch pad
     g.beginFill(0x1b2140).drawRect(-4, -80, 8, 12).endFill();
     g.beginFill(0xc77dff).drawRoundedRect(-46, -90, 92, 12, 6).endFill();
     g.beginFill(0xffffff, 0.35).drawRoundedRect(-40, -88, 50, 3, 1.5).endFill();

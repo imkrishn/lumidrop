@@ -38,6 +38,7 @@ export class Orb extends Container {
   update(dt: number): void {
     this.age += dt;
     this.y += this.speed * dt;
+    // little breathing pulse so they feel alive
     const pulse = 1 + Math.sin(this.age * 9 + this.phase) * 0.07;
     this.body.scale.set(pulse);
   }
@@ -48,9 +49,11 @@ export class Orb extends Container {
     const g = this.body;
     g.clear();
 
+    // two soft halos first
     g.beginFill(color, 0.1).drawCircle(0, 0, r * 2.3).endFill();
     g.beginFill(color, 0.22).drawCircle(0, 0, r * 1.6).endFill();
 
+    // bombs get a dark body and a fuse, the rest are plain glowing dots
     if (this.kind === 'bomb') {
       g.beginFill(0x1a0f1f).lineStyle(3, color).drawCircle(0, 0, r).endFill();
       g.lineStyle(0).beginFill(color).drawRect(-2, -r - 7, 4, 8).endFill();

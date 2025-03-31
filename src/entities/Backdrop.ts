@@ -27,6 +27,7 @@ export class Backdrop extends Container {
     this.dots.clear();
     for (const s of this.stars) {
       s.y += s.speed * dt;
+      // wrap back to the top
       if (s.y > config.height) Object.assign(s, this.makeStar(-2));
       const twinkle = 0.6 + Math.sin(this.clock * 2 + s.phase) * 0.4;
       this.dots.beginFill(0xffffff, s.alpha * twinkle).drawCircle(s.x, s.y, s.r).endFill();
@@ -34,6 +35,7 @@ export class Backdrop extends Container {
   }
 
   private makeStar(y: number): Star {
+    // deeper stars are bigger, brighter and faster
     const depth = Math.random();
     return {
       x: rand(0, config.width),
@@ -57,6 +59,7 @@ export class Backdrop extends Container {
   private drawFloor(): Graphics {
     const g = new Graphics();
     const top = config.floorY;
+    // fake glow fading up from the floor
     for (let i = 0; i < 10; i++) {
       g.beginFill(0x7df9ff, 0.018).drawRect(0, top - i * 5, config.width, i * 5).endFill();
     }
