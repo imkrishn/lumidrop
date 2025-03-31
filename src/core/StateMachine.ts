@@ -8,6 +8,7 @@ export interface State {
 export class StateMachine<K extends string> {
   private states = new Map<K, State>();
   private active: State | null = null;
+  // name of the current state, handy when debugging
   key: K | null = null;
 
   register(key: K, state: State): this {

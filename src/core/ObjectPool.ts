@@ -9,6 +9,7 @@ export class ObjectPool<T> {
     for (let i = 0; i < prewarm; i++) this.free.push(create());
   }
 
+  // reuse a free one, only make a new one when empty
   acquire(): T {
     return this.free.pop() ?? this.create();
   }

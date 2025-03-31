@@ -29,6 +29,7 @@ export class Game {
 
   async start(): Promise<void> {
     const canvas = this.app.view;
+    // spine is optional, null means we use the drawn hero
     const skeleton = await loadSkeleton(config.spineAsset);
 
     this.host.querySelector('#boot')?.remove();
@@ -44,6 +45,7 @@ export class Game {
     const backdrop = new Backdrop();
     const hero = new Hero(skeleton);
 
+    // draw order: background, orbs, hero, sparks on top
     world.addChild(backdrop, orbLayer, hero, fxLayer);
     this.app.stage.addChild(world, ui);
 
@@ -71,6 +73,7 @@ export class Game {
     input.onConfirm = () => machine.confirm();
     machine.change('menu');
 
+    // clamp dt so a tab switch doesn't make things jump
     this.app.ticker.add(() => {
       const dt = Math.min(this.app.ticker.deltaMS / 1000, 0.05);
       backdrop.update(dt);
@@ -80,6 +83,7 @@ export class Game {
   }
 
   private fit(): void {
+    // keep the aspect ratio and leave a small margin
     const scale = Math.min(window.innerWidth / config.width, window.innerHeight / config.height) * 0.96;
     const style = this.app.view.style;
     style.width = `${Math.floor(config.width * scale)}px`;
