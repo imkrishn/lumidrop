@@ -16,6 +16,7 @@ export class ScoreSystem {
   }
 
   get multiplier(): number {
+    // +1 every 5 catches, capped at x4
     return Math.min(1 + Math.floor(this.streak / 5), 4);
   }
 

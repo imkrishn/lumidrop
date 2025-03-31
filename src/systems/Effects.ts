@@ -29,6 +29,7 @@ export class Effects {
       },
       80
     );
+    // bombs get a bigger burst
     bus.on('orbCaught', ({ x, y, kind }) =>
       this.burst(x, y, orbKinds[kind].color, kind === 'bomb' ? 28 : 14)
     );
@@ -44,6 +45,7 @@ export class Effects {
         this.pool.release(s);
         continue;
       }
+      // gravity on the sparks
       s.vy += 380 * dt;
       s.x += s.vx * dt;
       s.y += s.vy * dt;

@@ -27,6 +27,7 @@ export class Spawner {
   update(dt: number, elapsed: number): void {
     this.timer -= dt;
     if (this.timer > 0) return;
+    // spawns get faster over time, down to a minimum
     this.timer = Math.max(config.spawn.min, config.spawn.start - elapsed * config.spawn.ramp);
     this.spawn(elapsed);
   }
@@ -44,6 +45,7 @@ export class Spawner {
 
   private spawn(elapsed: number): void {
     const orb = this.pool.acquire();
+    // orbs fall faster the longer you last
     const boost = Math.min(elapsed * 3, 140);
     const speed = rand(config.orb.minSpeed, config.orb.maxSpeed) + boost;
     orb.configure(this.pickKind(elapsed), rand(40, config.width - 40), speed);
@@ -52,6 +54,7 @@ export class Spawner {
   }
 
   private pickKind(elapsed: number): OrbKind {
+    // bombs get more common, up to 30%
     const bombChance = Math.min(0.12 + elapsed * 0.002, 0.3);
     const roll = Math.random();
     if (roll < bombChance) return 'bomb';
