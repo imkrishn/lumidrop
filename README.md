@@ -23,7 +23,7 @@ controls: arrow keys or a / d, or press and drag on touch screens. enter or spac
 
 the hero is a spine skeleton loaded with pixi-spine. drop an export into `public/assets/spine/` as `hero.json`, `hero.atlas` and `hero.png`. animation names are set in `src/config.ts`. if the files are missing the game falls back to a drawn robot so it always runs.
 
-the free spineboy example from esoteric software works fine for testing.
+a small robot rig (idle and run) already lives there, drawn to match the built in hero. swap it for your own export any time. the free spineboy example from esoteric software also works for testing.
 
 ## how it is put together
 
