@@ -1,0 +1,297 @@
+{
+  "skeleton": {
+    "hash": "lumidrop-hero",
+    "spine": "3.8.99",
+    "x": -230,
+    "y": 0,
+    "width": 460,
+    "height": 450
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "legL",
+      "parent": "root",
+      "x": -45,
+      "y": 120
+    },
+    {
+      "name": "legR",
+      "parent": "root",
+      "x": 45,
+      "y": 120
+    },
+    {
+      "name": "body",
+      "parent": "root",
+      "y": 100
+    },
+    {
+      "name": "visor",
+      "parent": "body",
+      "y": 155
+    },
+    {
+      "name": "stem",
+      "parent": "body",
+      "y": 270
+    },
+    {
+      "name": "pad",
+      "parent": "body",
+      "y": 320
+    }
+  ],
+  "slots": [
+    {
+      "name": "legL",
+      "bone": "legL",
+      "attachment": "leg"
+    },
+    {
+      "name": "legR",
+      "bone": "legR",
+      "attachment": "leg"
+    },
+    {
+      "name": "body",
+      "bone": "body",
+      "attachment": "body"
+    },
+    {
+      "name": "visor",
+      "bone": "visor",
+      "attachment": "visor"
+    },
+    {
+      "name": "stem",
+      "bone": "stem",
+      "attachment": "stem"
+    },
+    {
+      "name": "pad",
+      "bone": "pad",
+      "attachment": "pad"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "legL": {
+          "leg": {
+            "x": 0,
+            "y": -60,
+            "width": 72,
+            "height": 120
+          }
+        },
+        "legR": {
+          "leg": {
+            "x": 0,
+            "y": -60,
+            "width": 72,
+            "height": 120
+          }
+        },
+        "body": {
+          "body": {
+            "x": 0,
+            "y": 125,
+            "width": 280,
+            "height": 250
+          }
+        },
+        "visor": {
+          "visor": {
+            "width": 180,
+            "height": 70
+          }
+        },
+        "stem": {
+          "stem": {
+            "width": 40,
+            "height": 60
+          }
+        },
+        "pad": {
+          "pad": {
+            "width": 460,
+            "height": 60
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "idle": {
+      "bones": {
+        "body": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 0.8,
+              "x": 0,
+              "y": 7
+            },
+            {
+              "time": 1.6,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "scale": [
+            {
+              "time": 0,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 0.8,
+              "x": 1,
+              "y": 1.02
+            },
+            {
+              "time": 1.6,
+              "x": 1,
+              "y": 1
+            }
+          ]
+        },
+        "pad": {
+          "rotate": [
+            {
+              "time": 0,
+              "angle": 0
+            },
+            {
+              "time": 0.8,
+              "angle": -1.5
+            },
+            {
+              "time": 1.6,
+              "angle": 0
+            }
+          ]
+        }
+      }
+    },
+    "run": {
+      "bones": {
+        "legL": {
+          "rotate": [
+            {
+              "time": 0,
+              "angle": 0
+            },
+            {
+              "time": 0.125,
+              "angle": 30
+            },
+            {
+              "time": 0.25,
+              "angle": 0
+            },
+            {
+              "time": 0.375,
+              "angle": -30
+            },
+            {
+              "time": 0.5,
+              "angle": 0
+            }
+          ]
+        },
+        "legR": {
+          "rotate": [
+            {
+              "time": 0,
+              "angle": 0
+            },
+            {
+              "time": 0.125,
+              "angle": -30
+            },
+            {
+              "time": 0.25,
+              "angle": 0
+            },
+            {
+              "time": 0.375,
+              "angle": 30
+            },
+            {
+              "time": 0.5,
+              "angle": 0
+            }
+          ]
+        },
+        "body": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 0.125,
+              "x": 0,
+              "y": 14
+            },
+            {
+              "time": 0.25,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 0.375,
+              "x": 0,
+              "y": 14
+            },
+            {
+              "time": 0.5,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "rotate": [
+            {
+              "time": 0,
+              "angle": -3
+            },
+            {
+              "time": 0.25,
+              "angle": -5
+            },
+            {
+              "time": 0.5,
+              "angle": -3
+            }
+          ]
+        },
+        "pad": {
+          "rotate": [
+            {
+              "time": 0,
+              "angle": 3
+            },
+            {
+              "time": 0.25,
+              "angle": 5
+            },
+            {
+              "time": 0.5,
+              "angle": 3
+            }
+          ]
+        }
+      }
+    }
+  }
+}

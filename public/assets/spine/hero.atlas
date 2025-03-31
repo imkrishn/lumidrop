@@ -1,0 +1,40 @@
+hero.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 2
+  size: 280, 250
+  orig: 280, 250
+  offset: 0, 0
+  index: -1
+pad
+  rotate: false
+  xy: 290, 2
+  size: 460, 60
+  orig: 460, 60
+  offset: 0, 0
+  index: -1
+visor
+  rotate: false
+  xy: 290, 72
+  size: 180, 70
+  orig: 180, 70
+  offset: 0, 0
+  index: -1
+leg
+  rotate: false
+  xy: 490, 72
+  size: 72, 120
+  orig: 72, 120
+  offset: 0, 0
+  index: -1
+stem
+  rotate: false
+  xy: 580, 72
+  size: 40, 60
+  orig: 40, 60
+  offset: 0, 0
+  index: -1
