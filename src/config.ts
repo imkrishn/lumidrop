@@ -2,6 +2,7 @@ export const config = {
   width: 960,
   height: 600,
   background: 0x0b0d1a,
+  // y of the floor line
   floorY: 548,
   lives: 3,
   spineAsset: 'assets/spine/hero.json',
@@ -17,6 +18,7 @@ export const config = {
     minSpeed: 190,
     maxSpeed: 300
   },
+  // seconds between spawns, shrinks by ramp every second
   spawn: {
     start: 0.9,
     min: 0.3,

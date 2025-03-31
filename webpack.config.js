@@ -19,6 +19,7 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({ template: 'src/index.html' }),
+      // copies public/ (spine files) next to the bundle
       new CopyPlugin({ patterns: [{ from: 'public', to: '.' }] })
     ],
     devServer: { static: path.resolve(__dirname, 'public'), port: 5173, hot: true },
