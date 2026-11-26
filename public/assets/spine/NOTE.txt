@@ -1,7 +1,0 @@
-drop your spine export here, named:
-  hero.json   (skeleton)
-  hero.atlas
-  hero.png    (atlas page, keep the name the atlas file points at)
-
-animations looked up by name from src/config.ts (anim.idle, anim.move).
-no files here means the game falls back to the built in drawn hero.
